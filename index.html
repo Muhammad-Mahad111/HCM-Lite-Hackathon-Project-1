@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body data-page="index">
+    <main class="auth">
+        <div class="card" id="setupCard" hidden>
+            <h1>Set up your company</h1>
+            <p class="sub">First run: create your company and Admin account.</p>
+            <form id="setupForm" novalidate>
+                <label>Company name<input name="company" autocomplete="organization"><span class="err"
+                        data-for="company"></span></label>
+                <label>Your name<input name="name" autocomplete="name"><span class="err" data-for="name"></span></label>
+                <label>Admin email<input name="email" type="email" autocomplete="email"><span class="err"
+                        data-for="email"></span></label>
+                <label>Password<input name="password" type="password" autocomplete="new-password"><span class="err"
+                        data-for="password"></span></label>
+                <button class="btn" type="submit">Create company</button>
+            </form>
+        </div>
+        <div class="card" id="loginCard" hidden>
+            <h1>Log in</h1>
+            <p class="sub">Use the email and password created by your Admin.</p>
+            <form id="loginForm" novalidate>
+                <label>Email<input name="email" type="email" autocomplete="username"><span class="err"
+                        data-for="email"></span></label>
+                <label>Password<input name="password" type="password" autocomplete="current-password"><span class="err"
+                        data-for="password"></span></label>
+                <button class="btn" type="submit">Log in</button>
+            </form>
+        </div>
+        <p class="note">Educational demo: accounts live in this browser's localStorage and are not secure for real HR
+            data.</p>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+
+</html>

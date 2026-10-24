@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Payslip - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-page="payslip">
+    <div id="nav"></div>
+    <main>
+      <h1 class="noprint">Payslip</h1>
+      <div class="card noprint" id="controls">
+        <div class="row">
+          <label id="empLabel">Employee<select id="empSel"></select></label>
+          <label>Month<input type="month" id="month" /></label>
+        </div>
+        <button class="btn" id="genBtn">Generate payslip</button>
+        <button class="btn alt" id="printBtn" hidden>
+          Print / Save as PDF
+        </button>
+      </div>
+      <div id="slip"></div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

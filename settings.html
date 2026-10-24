@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Settings - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-page="settings">
+    <div id="nav"></div>
+    <main>
+      <h1>Settings</h1>
+      <p class="sub">
+        Rules used for attendance, leave and payslips. Changes apply to all
+        dates.
+      </p>
+      <div class="card">
+        <form id="setForm" novalidate>
+          <div class="row">
+            <label
+              >Company name<input name="name" /><span
+                class="err"
+                data-for="name"
+              ></span
+            ></label>
+            <label
+              >Office start time<input name="startTime" type="time" /><span
+                class="err"
+                data-for="startTime"
+              ></span
+            ></label>
+            <label
+              >Grace minutes<input name="grace" type="number" min="0" /><span
+                class="err"
+                data-for="grace"
+              ></span
+            ></label>
+            <label
+              >Yearly leave quota (working days)<input
+                name="quota"
+                type="number"
+                min="0" /><span class="err" data-for="quota"></span
+            ></label>
+          </div>
+          <fieldset
+            style="
+              border: 1px solid var(--bd);
+              border-radius: 6px;
+              margin-bottom: 12px;
+            "
+          >
+            <legend><b>Working days</b></legend>
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="1"
+                style="display: inline; width: auto"
+              />
+              Mon</label
+            >
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="2"
+                style="display: inline; width: auto"
+              />
+              Tue</label
+            >
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="3"
+                style="display: inline; width: auto"
+              />
+              Wed</label
+            >
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="4"
+                style="display: inline; width: auto"
+              />
+              Thu</label
+            >
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="5"
+                style="display: inline; width: auto"
+              />
+              Fri</label
+            >
+            <label style="display: inline-block; margin-right: 14px"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="6"
+                style="display: inline; width: auto"
+              />
+              Sat</label
+            >
+            <label style="display: inline-block"
+              ><input
+                type="checkbox"
+                name="wd"
+                value="0"
+                style="display: inline; width: auto"
+              />
+              Sun</label
+            >
+            <span class="err" data-for="wd"></span>
+          </fieldset>
+          <button class="btn" type="submit">Save settings</button>
+        </form>
+      </div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

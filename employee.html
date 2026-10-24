@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My dashboard - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body data-page="employee">
+    <div id="nav"></div>
+    <main>
+        <h1>My dashboard</h1>
+        <p class="sub">Your attendance, leave and questions in one place.</p>
+        <div class="grid" id="stats"></div>
+        <div class="cols">
+            <div class="card">
+                <h2>Today</h2>
+                <div id="todayInfo"></div>
+                <button class="btn" id="inBtn">Check in</button> <button class="btn alt" id="outBtn2">Check out</button>
+            </div>
+            <div class="card" id="helper"></div>
+        </div>
+        <div class="card">
+            <h2>My attendance (last 30 days)</h2>
+            <div class="empty" id="attNote" hidden>No attendance records yet. Use Check in to start.</div>
+            <div class="tw">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                            <th>Worked</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="cols">
+            <div class="card">
+                <h2>Apply for leave</h2>
+                <form id="leaveForm" novalidate>
+                    <label>Leave type<select name="type">
+                            <option value="casual">Casual</option>
+                            <option value="sick">Sick</option>
+                        </select><span class="err" data-for="type"></span></label>
+                    <div class="row"><label>Start date<input name="start" type="date"><span class="err"
+                                data-for="start"></span></label>
+                        <label>End date<input name="end" type="date"><span class="err" data-for="end"></span></label>
+                    </div>
+                    <label>Reason<textarea name="reason" rows="3"></textarea><span class="err"
+                            data-for="reason"></span></label>
+                    <button class="btn" type="submit">Submit request</button>
+                </form>
+            </div>
+            <div class="card">
+                <h2>My leave requests</h2>
+                <div class="tw" id="leaveWrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Dates</th>
+                                <th>Days</th>
+                                <th>Status</th>
+                                <th>Admin comment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myLeaves"></tbody>
+                    </table>
+                </div>
+                <div class="empty" id="leaveEmpty">No leave requests yet.</div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin dashboard - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-page="admin">
+    <div id="nav"></div>
+    <main>
+      <h1>Admin dashboard</h1>
+      <p class="sub">Live company statistics for today.</p>
+      <div class="grid" id="stats"></div>
+      <div class="cols">
+        <div class="card">
+          <h2>Today's attendance</h2>
+          <div id="today"></div>
+        </div>
+        <div class="card" id="helper"></div>
+      </div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

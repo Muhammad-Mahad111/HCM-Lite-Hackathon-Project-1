@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Employees - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-page="employees">
+    <div id="nav"></div>
+    <main>
+      <h1>Employees</h1>
+      <p class="sub">Adding an employee also creates their login.</p>
+      <div class="card">
+        <h2 id="formTitle">Add employee</h2>
+        <form id="empForm" novalidate>
+          <div class="row">
+            <label
+              >Full name<input name="name" /><span
+                class="err"
+                data-for="name"
+              ></span
+            ></label>
+            <label
+              >Email (login)<input name="email" type="email" /><span
+                class="err"
+                data-for="email"
+              ></span
+            ></label>
+            <label
+              >Department<input name="department" /><span
+                class="err"
+                data-for="department"
+              ></span
+            ></label>
+            <label
+              >Monthly salary (PKR)<input
+                name="salary"
+                type="number"
+                min="0"
+                step="0.01" /><span class="err" data-for="salary"></span
+            ></label>
+            <label
+              >Joining date<input name="joinDate" type="date" /><span
+                class="err"
+                data-for="joinDate"
+              ></span
+            ></label>
+            <label
+              >Password<input
+                name="password"
+                type="password"
+                autocomplete="new-password" /><span
+                class="err"
+                data-for="password"
+              ></span
+            ></label>
+          </div>
+          <button class="btn" id="saveBtn" type="submit">Add employee</button>
+          <button class="btn alt" id="cancelEdit" type="button" hidden>
+            Cancel edit
+          </button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>All employees</h2>
+        <div class="bar">
+          <input
+            id="q"
+            placeholder="Search by name or email"
+            aria-label="Search"
+          /><select id="dep" aria-label="Department filter"></select>
+        </div>
+        <div class="tw" id="tableWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="empBody"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="empty"></div>
+      </div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Leave requests - HCM Lite</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-page="leaves">
+    <div id="nav"></div>
+    <main>
+      <h1>Leave requests</h1>
+      <p class="sub">Approve or reject requests. Rejections need a comment.</p>
+      <div class="card">
+        <div class="bar">
+          <select id="statusFilter" aria-label="Status filter">
+            <option value="">All statuses</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </div>
+        <div class="tw" id="leaveWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Type</th>
+                <th>Dates</th>
+                <th>Working days</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Decision / comment</th>
+              </tr>
+            </thead>
+            <tbody id="leaveBody"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="empty"></div>
+      </div>
+    </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/employees.js"></script>
+    <script src="./js/attendance.js"></script>
+    <script src="./js/leave.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/payslip.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>
